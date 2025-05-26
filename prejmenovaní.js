@@ -31,7 +31,7 @@ twcheese.createNamerGUI = function()
 		contentContainer.appendChild(titleBar);
 		
 		var narcismElement = document.createElement('span');			
-		narcismElement.innerHTML = 'Created by <a href="http://forum.tribalwars.net/member.php?u=28484" target="_blank">cheesasaurus</a>; Fixed by Spencer (Ghost)';
+		narcismElement.innerHTML = 'Edited by J.o.s.h.u.a 2025';
 		narcismElement.style.fontSize = '8px';
 		narcismElement.style.fontStyle = 'normal';
 		narcismElement.style.fontWeight = 'normal';
