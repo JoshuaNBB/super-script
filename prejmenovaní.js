@@ -1,35 +1,3 @@
-                         /**	nameVillages.js
- *	names player's villages on overviews (screen=overview_villages)
- *	Original author: Nick Toby (cheesasaurus@gmail.com)
- *	New Author: Spencer D. (Ghost/LilGhost/TheGhostTown)
- *	Game compatibility:	version	29662 8.48
- 
- ==== changelog ====
- * 7 July 2013	- released
- * 15 July 2013 - added sector option (continent:sector:village)
- * 8 August 2013 - added digits specification for number option - changed a lot of the procedures to account for deviation from the original layout
- * 18 march 2014 - updated for version 8.20 quickedit renaming
- * 22 march 2014 - added a 'direction' option
- * 26 April 2016 - Updated for Tribal Wars version 8.48 - Update by Ghost
- * 14 07 2020 - cesky preklad - Dux
- 
- ==== license ====
- *	Copyright (C) 2013  Nick Toby
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see http://www.gnu.org/licenses/
- */ 
-
 /*==== GUI ====*/
 if(!twcheese || typeof twcheese !== 'object')
 	var twcheese={};
@@ -54,7 +22,7 @@ twcheese.createNamerGUI = function()
 		titleBar.insertRow(-1);
 		titleBar.rows[0].insertCell(-1);
 		titleBar.rows[0].insertCell(-1);
-		titleBar.rows[0].cells[0].innerHTML = '<b>JmĂ©no vesnice</b> (max 32 znakĹŻ) - Fixed by LilGhost';
+		titleBar.rows[0].cells[0].innerHTML = '<b>Jméno vesnice</b> (max 32 znaků) - Edited by J.o.s.h.u.a';
 		titleBar.rows[0].cells[0].width = '100%';
 		titleBar.rows[0].cells[1].innerHTML = '<img src="graphic/delete.png" alt="X"/>';
 		titleBar.rows[0].cells[1].style.cursor="pointer";
@@ -63,37 +31,35 @@ twcheese.createNamerGUI = function()
 		contentContainer.appendChild(titleBar);
 		
 		var narcismElement = document.createElement('span');			
-		narcismElement.innerHTML = 'Created by <a href="http://forum.tribalwars.net/member.php?u=28484" target="_blank">cheesasaurus</a>; Fixed by Spencer (Ghost)';
+		narcismElement.innerHTML = 'Edited by J.o.s.h.u.a 2025';
 		narcismElement.style.fontSize = '8px';
 		narcismElement.style.fontStyle = 'normal';
 		narcismElement.style.fontWeight = 'normal';
 		narcismElement.style.marginRight = '25px';
 		narcismElement.style.cssFloat = 'right';
 		titleBar.rows[0].cells[0].appendChild(narcismElement);
-	
-	
+
 	var content = document.createElement('div');
 	content.id = 'twcheese_name_config';
 	content.style.padding = '5px';
-	
+
 	var useDefaultConfig = false;
-	
+
 	if(localStorage.getItem('twcheese.nameVillagesConfig'))
 	{
 		var options = JSON.parse(localStorage.getItem('twcheese.nameVillagesConfig'));
 		content.config = options;
-		
-		/*==== update: 8 august 2013 - change format ====*/
+
 		for(var i=0; i<options.length; i++)
 		{			
 			if(options[i].name == 'number_villages')
 			{				
 				if(!options[i].digits)
 				{
-					options[i].description = 'number villages';
+					options[i].description = 'číslování vesnic';
 					options[i].startNum = options[i].label;
 					options[i].digits = 4;
-					
+
 					for(var j=0; j<options.length; j++)
 					{
 						options[j].label = options[j].defaultLabel;
@@ -101,8 +67,7 @@ twcheese.createNamerGUI = function()
 				}
 			}			
 		}
-		
-		/*==== update: 22 march 2014 - added direction option ====*/
+
 		var hasDirectionOption = false;
 		for (var i=0; i<options.length; i++) {
 			if (options[i].name == 'direction') {
@@ -127,23 +92,23 @@ twcheese.createNamerGUI = function()
 					alertUser = false;
 				}
 			}
-			
+
 			if (alertUser) {
-				alert('Aktualizace! Byla pĹ™idĂˇna novĂˇ moĹľnost pĹ™ejmenovĂˇnĂ­:\n\n"Direction"\noznaÄŤuje zemÄ›pisnĂ© umĂ­stÄ›nĂ­ vesnice na jejĂ­m kontinentu');
+				alert('Aktualizace! Byla přidána nová možnost přejmenování:\n\n"Direction"\noznačuje zeměpisné umístění vesnice na jejím kontinentu');
 				localStorage.setItem('twcheese_nameVillages_lastUpdateMessage', '1');
 			}
-		}		
+		} 		
 	}
 	else
-		useDefaultConfig = true;	
-	
+		useDefaultConfig = true;
+
 	if(useDefaultConfig)
 	{
 		content.config = [];
 		var options = [
 			{
 				name:'number_villages',
-				description:'Vesnice v ÄŤĂ­selnĂ© Ĺ™adÄ›',
+				description:'Vesnice v číselné řadě',
 				defaultLabel:'0',
 				startNum:'0',
 				digits:'4',
@@ -159,50 +124,50 @@ twcheese.createNamerGUI = function()
 			},
 			{
 				name:'insert_text0',
-				description:'VlastnĂ­ text',
-				defaultLabel:' VlastnĂ­ text ',
+				description:'Vlastní text',
+				defaultLabel:' Vlastní text ',
 				example:'',
 				enabled: true
 			},	
 			{
 				name:'distance',
-				description:'VzdĂˇlenost od vesnice (do pole vlevo zadejte souĹ™adnice)',
+				description:'Vzdálenost od vesnice (do pole vlevo zadejte souřadnice)',
 				defaultLabel:'500|500',
 				example:'13.37',
 				enabled: true
 			},
 			{
 				name:'sector',
-				description:'kontinent:sektor:pole <img id="twcheese_sector_help" src="http://cdn.tribalwars.net/graphic/questionmark.png" style="width: 13px; height: 13px" title="Mapa je rozdÄ›lena zleva doprava, shora dolĹŻ.<br/>SvÄ›t - 100 kontinentĹŻ (10x10)<br/>Kontinent - 400 sektorĹŻ (20x20)<br/>Sektor - 25 polĂ­ (5x5)">',
+				description:'kontinent:sektor:pole',
 				defaultLabel:' ',
 				example:'55:12:20',
 				enabled: false
 			},
 			{
 				name:'direction',
-				description:'ZemÄ›pisnĂ© umĂ­stÄ›nĂ­ na kontinentu',
+				description:'Zeměpisné umístění na kontinentu',
 				defaultLabel:' ',
 				example:'SV',
 				enabled: false
 			},
 			{
 				name:'random_text',
-				description:'NĂˇhodnĂ© jmĂ©no',
+				description:'Náhodné jméno',
 				defaultLabel:' ',
-				example:'NĂˇhodnĂ© jmĂ©no',
+				example:'Náhodné jméno',
 				enabled: false
 			},			
 			{
 				name:'insert_text1',
-				description:'VlastnĂ­ text',
-				defaultLabel:' VlastnĂ­ text ',
+				description:'Vlastní text',
+				defaultLabel:' Vlastní text ',
 				example:'',
 				enabled: false
 			},
 			{
 				name:'insert_text2',
-				description:'Vlastni text',
-				defaultLabel:' VlastnĂ­ text ',
+				description:'Vlastní text',
+				defaultLabel:' Vlastní text ',
 				example:'',
 				enabled: false
 			}
@@ -212,7 +177,8 @@ twcheese.createNamerGUI = function()
 			options[i].label = options[i].defaultLabel;
 		}
 	}
-	
+}
+
 
 	
 	content.generateExample = function()
