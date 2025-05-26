@@ -1,3 +1,35 @@
+                         /**	nameVillages.js
+ *	names player's villages on overviews (screen=overview_villages)
+ *	Original author: Nick Toby (cheesasaurus@gmail.com)
+ *	New Author: Spencer D. (Ghost/LilGhost/TheGhostTown)
+ *	Game compatibility:	version	29662 8.48
+ 
+ ==== changelog ====
+ * 7 July 2013	- released
+ * 15 July 2013 - added sector option (continent:sector:village)
+ * 8 August 2013 - added digits specification for number option - changed a lot of the procedures to account for deviation from the original layout
+ * 18 march 2014 - updated for version 8.20 quickedit renaming
+ * 22 march 2014 - added a 'direction' option
+ * 26 April 2016 - Updated for Tribal Wars version 8.48 - Update by Ghost
+ * 14 07 2020 - cesky preklad - Dux
+ 
+ ==== license ====
+ *	Copyright (C) 2013  Nick Toby
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see http://www.gnu.org/licenses/
+ */ 
+
 /*==== GUI ====*/
 if(!twcheese || typeof twcheese !== 'object')
 	var twcheese={};
@@ -31,7 +63,7 @@ twcheese.createNamerGUI = function()
 		contentContainer.appendChild(titleBar);
 		
 		var narcismElement = document.createElement('span');			
-		narcismElement.innerHTML = 'Edited by J.o.s.h.u.a 2025';
+		narcismElement.innerHTML = 'Created by <a href="http://forum.tribalwars.net/member.php?u=28484" target="_blank">cheesasaurus</a>; Fixed by Spencer (Ghost)';
 		narcismElement.style.fontSize = '8px';
 		narcismElement.style.fontStyle = 'normal';
 		narcismElement.style.fontWeight = 'normal';
