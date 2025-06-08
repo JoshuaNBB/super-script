@@ -6,6 +6,7 @@
 // @author       J.o.s.h.u.a
 // @match        https://*/game.php?*screen=place*
 // @match        https://*/game.php?village=*&screen=map*
+// @match        https://*/game.php?*screen=place&try=confirm*
 // @grant        none
 // ==/UserScript==
 
