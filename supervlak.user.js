@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         SUPER VLAK 2
 // @namespace    https://divokekmeny.cz/
-// @version      3.5
-// @description  Vlak s režimem BARBARKA: 25 LC + 1 šlechtic ve všech útocích. Podpora režimu 1 šlechtic. © J.o.s.h.u.a 2025
+// @version      4.0
+// @description  Vlak s režimem BARBARKA: 25 LC + 1 šlechtic nebo plný útok pro hráče. Podpora režimu 1 šlechtic. © J.o.s.h.u.a 2025
 // @author       J.o.s.h.u.a
 // @match        https://*/game.php?*screen=place*
 // @match        https://*/game.php?village=*&screen=map*
@@ -198,17 +198,17 @@
             if (snobCount > 0) snob.value = 1;
         }
 
-        // Režim "1 šlechtic" => odeslat okamžitě, bez train
+        // Režim "1 šlechtic"
         if (pocet === 1) {
             setTimeout(() => {
                 const attackBtn = document.getElementById("target_attack");
                 if (attackBtn) attackBtn.click();
-                localStorage.removeItem(FLAG_RUNNING);
+                // potvrzení se provede v confirmPageScript
             }, 300);
             return;
         }
 
-        // Jinak pokračuj jako vlak
+        // Režimy 2+ šlechtici
         setTimeout(() => {
             const attackBtn = document.getElementById("target_attack");
             if (!attackBtn) {
@@ -276,6 +276,8 @@
         const pocet = parseInt(localStorage.getItem(STORAGE_KEY) || "4");
 
         if (pocet === 1) {
+            const submitBtn = document.getElementById("troop_confirm_submit");
+            if (submitBtn) submitBtn.click();
             localStorage.removeItem(FLAG_RUNNING);
             return;
         }
