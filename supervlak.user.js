@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         SUPER VLAK 2
 // @namespace    https://github.com/JoshuaNBB
-// @version      5.7
+// @version      5.9
 // @description  Vlak s režimem BARBARKA: 25 LC + 1 šlechtic ve všech útocích. © J.o.s.h.u.a 2025 (ojeb)
 // @author       J.o.s.h.u.a
 // @match        https://*/game.php?*screen=place*
@@ -11,6 +11,7 @@
 // @downloadURL  https://raw.githubusercontent.com/JoshuaNBB/super-script/main/supervlak.user.js
 // @grant        none
 // ==/UserScript==
+
 
 (function () {
     'use strict';
@@ -243,26 +244,22 @@
         const mazatDruhy = localStorage.getItem("vlakMazatDruhy") === "true";
 
         if (mazatDruhy) {
-            let elapsed = 0;
-            const interval = setInterval(() => {
-                const submitBtn = document.getElementById("troop_confirm_submit");
-                if (submitBtn && !submitBtn.disabled) {
-                    submitBtn.click();
-                    clearInterval(interval);
-                    localStorage.removeItem(FLAG_RUNNING);
-                    localStorage.removeItem("vlakMazatDruhy");
-                } else if (submitBtn) {
-                    submitBtn.disabled = false;
-                }
+            const submitBtn = document.getElementById("troop_confirm_submit");
 
-                elapsed += 100;
-                if (elapsed > 3000) {
-                    clearInterval(interval);
-                    alert("Tlačítko 'Poslat útok' se neobjevilo nebo je neaktivní.");
-                    localStorage.removeItem(FLAG_RUNNING);
-                    localStorage.removeItem("vlakMazatDruhy");
-                }
-            }, 100);
+            if (!submitBtn) {
+                alert("Tlačítko Poslat útok nebylo nalezeno.");
+                localStorage.removeItem(FLAG_RUNNING);
+                localStorage.removeItem("vlakMazatDruhy");
+                return;
+            }
+
+            submitBtn.disabled = false;
+            submitBtn.click(); // první klik
+            setTimeout(() => {
+                submitBtn.click(); // druhý klik jako simulace dvojitého Enteru
+                localStorage.removeItem(FLAG_RUNNING);
+                localStorage.removeItem("vlakMazatDruhy");
+            }, 150);
             return;
         }
 
