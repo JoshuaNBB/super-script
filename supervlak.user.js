@@ -1,12 +1,11 @@
 // ==UserScript==
 // @name         SUPER VLAK 2
 // @namespace    https://divokekmeny.cz/
-// @version      3.3
-// @description  Vlak s režimem BARBARKA: 25 LC + 1 šlechtic ve všech útocích. © J.o.s.h.u.a 2025
+// @version      3.5
+// @description  Vlak s režimem BARBARKA: 25 LC + 1 šlechtic ve všech útocích. Podpora režimu 1 šlechtic. © J.o.s.h.u.a 2025
 // @author       J.o.s.h.u.a
 // @match        https://*/game.php?*screen=place*
 // @match        https://*/game.php?village=*&screen=map*
-// @match        https://*/game.php?*screen=place&try=confirm*
 // @grant        none
 // ==/UserScript==
 
@@ -19,11 +18,7 @@
     const isConfirmPage = window.location.href.includes("try=confirm");
 
     if (isConfirmPage) {
-        if (localStorage.getItem(FLAG_RUNNING) === "true") {
-            const submitBtn = document.getElementById("troop_confirm_submit");
-            if (submitBtn) submitBtn.click();
-            localStorage.removeItem(FLAG_RUNNING);
-        }
+        if (localStorage.getItem(FLAG_RUNNING) === "true") confirmPageScript();
         return;
     }
 
@@ -91,7 +86,7 @@
 
             const label = document.createElement("div");
             label.appendChild(cb);
-            label.append(` ${value} šlechtic${value === "1" ? "" : "i"}`);
+            label.append(` ${value} šlechtic(i)`);
             chooser.appendChild(label);
         });
 
@@ -174,70 +169,143 @@
         const typ = localStorage.getItem(TYPE_KEY) || "hrac";
         const pocet = parseInt(localStorage.getItem(STORAGE_KEY) || "4");
 
+        if (typ === "barbarka") {
+            document.getElementById("unit_input_light").value = 25;
+            document.getElementById("unit_input_snob").value = 1;
+        } else {
+            const jednotky = {
+                axe: "unit_input_axe",
+                light: "unit_input_light",
+                ram: "unit_input_ram",
+                snob: "unit_input_snob"
+            };
+
+            const axe = document.getElementById(jednotky.axe);
+            const axeCount = parseInt(axe?.dataset.allCount || "0");
+            if (axeCount > 0) axe.value = axeCount;
+
+            const light = document.getElementById(jednotky.light);
+            const lightCount = parseInt(light?.dataset.allCount || "0");
+            const sendLight = Math.max(0, lightCount - 300);
+            if (sendLight > 0) light.value = sendLight;
+
+            const ram = document.getElementById(jednotky.ram);
+            const ramCount = parseInt(ram?.dataset.allCount || "0");
+            if (ramCount > 0) ram.value = ramCount;
+
+            const snob = document.getElementById(jednotky.snob);
+            const snobCount = parseInt(snob?.dataset.allCount || "0");
+            if (snobCount > 0) snob.value = 1;
+        }
+
+        // Režim "1 šlechtic" => odeslat okamžitě, bez train
         if (pocet === 1) {
-            if (typ === "barbarka") {
-                document.getElementById("unit_input_light").value = 25;
-                document.getElementById("unit_input_snob").value = 1;
-            } else {
-                const jednotky = {
-                    axe: "unit_input_axe",
-                    light: "unit_input_light",
-                    ram: "unit_input_ram",
-                    snob: "unit_input_snob"
-                };
-                const axe = document.getElementById(jednotky.axe);
-                const axeCount = parseInt(axe?.dataset.allCount || "0");
-                if (axeCount > 0) axe.value = axeCount;
-
-                const light = document.getElementById(jednotky.light);
-                const lightCount = parseInt(light?.dataset.allCount || "0");
-                const sendLight = Math.max(0, lightCount - 300);
-                if (sendLight > 0) light.value = sendLight;
-
-                const ram = document.getElementById(jednotky.ram);
-                const ramCount = parseInt(ram?.dataset.allCount || "0");
-                if (ramCount > 0) ram.value = ramCount;
-
-                const snob = document.getElementById(jednotky.snob);
-                const snobCount = parseInt(snob?.dataset.allCount || "0");
-                if (snobCount > 0) snob.value = 1;
-            }
-
             setTimeout(() => {
                 const attackBtn = document.getElementById("target_attack");
                 if (attackBtn) attackBtn.click();
-                // FLAG_RUNNING necháváme aktivní, aby se confirm stránka odeslala
-            }, 200);
+                localStorage.removeItem(FLAG_RUNNING);
+            }, 300);
             return;
         }
 
-        // Režim vlak
-        document.getElementById("unit_input_snob").value = 1;
-        const attackBtn = document.getElementById("target_attack");
-        if (attackBtn) attackBtn.click();
+        // Jinak pokračuj jako vlak
+        setTimeout(() => {
+            const attackBtn = document.getElementById("target_attack");
+            if (!attackBtn) {
+                alert("Tlačítko Útok nebylo nalezeno.");
+                localStorage.removeItem(FLAG_RUNNING);
+                return;
+            }
+
+            attackBtn.click();
+
+            let clickCount = 0;
+            const maxClicks = pocet - 1;
+            const maxAttackIndex = pocet;
+
+            function clickNextAdd() {
+                const addBtn = document.querySelector("#troop_confirm_train.place-confirm-new-attack");
+                if (addBtn) {
+                    addBtn.click();
+                    clickCount++;
+                    if (clickCount < maxClicks) {
+                        setTimeout(clickNextAdd, 150);
+                    } else {
+                        setTimeout(() => {
+                            doplnitUtoky(2, maxAttackIndex, typ);
+                            setTimeout(() => {
+                                const submitBtn = document.getElementById("troop_confirm_submit");
+                                if (submitBtn) submitBtn.click();
+                                localStorage.removeItem(FLAG_RUNNING);
+                            }, 200);
+                        }, 150);
+                    }
+                } else {
+                    setTimeout(clickNextAdd, 250);
+                }
+            }
+
+            setTimeout(clickNextAdd, 500);
+        }, 200);
+    }
+
+    function doplnitUtoky(from, to, typ) {
+        for (let i = from; i <= to; i++) {
+            const jednotky = ["spear", "sword", "axe", "archer", "spy", "light", "heavy", "ram", "catapult", "knight", "snob"];
+            jednotky.forEach(j => {
+                const input = document.querySelector(`input[name="train[${i}][${j}]"]`);
+                if (input) input.value = "";
+            });
+
+            if (typ === "barbarka") {
+                const light = document.querySelector(`input[name="train[${i}][light]"]`);
+                const snob = document.querySelector(`input[name="train[${i}][snob]"]`);
+                if (light) light.value = 25;
+                if (snob) snob.value = 1;
+            } else {
+                const light = document.querySelector(`input[name="train[${i}][light]"]`);
+                const snob = document.querySelector(`input[name="train[${i}][snob]"]`);
+                if (light) light.value = 100;
+                if (snob) snob.value = 1;
+            }
+        }
+    }
+
+    function confirmPageScript() {
+        const typ = localStorage.getItem(TYPE_KEY) || "hrac";
+        const pocet = parseInt(localStorage.getItem(STORAGE_KEY) || "4");
+
+        if (pocet === 1) {
+            localStorage.removeItem(FLAG_RUNNING);
+            return;
+        }
 
         let clickCount = 0;
         const maxClicks = pocet - 1;
+        const maxAttackIndex = pocet;
 
         function clickNextAdd() {
-            const addBtn = document.querySelector("#troop_confirm_train.place-confirm-new-attack");
+            const addBtn = document.getElementById("troop_confirm_train");
             if (addBtn) {
                 addBtn.click();
                 clickCount++;
                 if (clickCount < maxClicks) {
-                    setTimeout(clickNextAdd, 150);
+                    setTimeout(clickNextAdd, 100);
                 } else {
                     setTimeout(() => {
-                        const submitBtn = document.getElementById("troop_confirm_submit");
-                        if (submitBtn) submitBtn.click();
-                        localStorage.removeItem(FLAG_RUNNING);
-                    }, 300);
+                        doplnitUtoky(2, maxAttackIndex, typ);
+                        setTimeout(() => {
+                            const submitBtn = document.getElementById("troop_confirm_submit");
+                            if (submitBtn) submitBtn.click();
+                            localStorage.removeItem(FLAG_RUNNING);
+                        }, 200);
+                    }, 100);
                 }
             } else {
-                setTimeout(clickNextAdd, 250);
+                localStorage.removeItem(FLAG_RUNNING);
             }
         }
 
-        setTimeout(clickNextAdd, 500);
+        setTimeout(clickNextAdd, 300);
     }
 })();
