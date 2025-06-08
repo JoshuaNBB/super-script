@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         SUPER VLAK 2
 // @namespace    https://github.com/JoshuaNBB
-// @version      5.2
+// @version      5.3
 // @description  Vlak s režimem BARBARKA: 25 LC + 1 šlechtic ve všech útocích. © J.o.s.h.u.a 2025 (ojeb)
 // @author       J.o.s.h.u.a
 // @match        https://*/game.php?*screen=place*
