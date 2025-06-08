@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name         SUPER VLAK 2
 // @namespace    https://github.com/JoshuaNBB
-// @version      5.5
+// @version      5.7
 // @description  Vlak s režimem BARBARKA: 25 LC + 1 šlechtic ve všech útocích. © J.o.s.h.u.a 2025 (ojeb)
 // @author       J.o.s.h.u.a
 // @match        https://*/game.php?*screen=place*
 // @match        https://*/game.php?village=*&screen=map*
-// @match        https://*/game.php?t=*
+// @match        https://*/game.php*
 // @updateURL    https://raw.githubusercontent.com/JoshuaNBB/super-script/main/supervlak.user.js
 // @downloadURL  https://raw.githubusercontent.com/JoshuaNBB/super-script/main/supervlak.user.js
 // @grant        none
@@ -243,17 +243,26 @@
         const mazatDruhy = localStorage.getItem("vlakMazatDruhy") === "true";
 
         if (mazatDruhy) {
-            setTimeout(() => {
+            let elapsed = 0;
+            const interval = setInterval(() => {
                 const submitBtn = document.getElementById("troop_confirm_submit");
-                if (submitBtn) {
-                    submitBtn.disabled = false;
+                if (submitBtn && !submitBtn.disabled) {
                     submitBtn.click();
-                } else {
-                    alert("Tlačítko Poslat útok nenalezeno.");
+                    clearInterval(interval);
+                    localStorage.removeItem(FLAG_RUNNING);
+                    localStorage.removeItem("vlakMazatDruhy");
+                } else if (submitBtn) {
+                    submitBtn.disabled = false;
                 }
-                localStorage.removeItem(FLAG_RUNNING);
-                localStorage.removeItem("vlakMazatDruhy");
-            }, 500);
+
+                elapsed += 100;
+                if (elapsed > 3000) {
+                    clearInterval(interval);
+                    alert("Tlačítko 'Poslat útok' se neobjevilo nebo je neaktivní.");
+                    localStorage.removeItem(FLAG_RUNNING);
+                    localStorage.removeItem("vlakMazatDruhy");
+                }
+            }, 100);
             return;
         }
 
