@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         SUPER VLAK 2
 // @namespace    https://github.com/JoshuaNBB
-// @version      5.3
+// @version      5.5
 // @description  Vlak s režimem BARBARKA: 25 LC + 1 šlechtic ve všech útocích. © J.o.s.h.u.a 2025 (ojeb)
 // @author       J.o.s.h.u.a
 // @match        https://*/game.php?*screen=place*
@@ -245,10 +245,15 @@
         if (mazatDruhy) {
             setTimeout(() => {
                 const submitBtn = document.getElementById("troop_confirm_submit");
-                if (submitBtn) submitBtn.click();
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.click();
+                } else {
+                    alert("Tlačítko Poslat útok nenalezeno.");
+                }
                 localStorage.removeItem(FLAG_RUNNING);
                 localStorage.removeItem("vlakMazatDruhy");
-            }, 300);
+            }, 500);
             return;
         }
 
@@ -272,7 +277,10 @@
                             if (deleteBtn) deleteBtn.click();
                             setTimeout(() => {
                                 const submitBtn = document.getElementById("troop_confirm_submit");
-                                if (submitBtn) submitBtn.click();
+                                if (submitBtn) {
+                                    submitBtn.disabled = false;
+                                    submitBtn.click();
+                                }
                                 localStorage.removeItem(FLAG_RUNNING);
                                 localStorage.removeItem("vlakMazatDruhy");
                             }, 200);
