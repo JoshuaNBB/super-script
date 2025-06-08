@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         SUPER VLAK 2
 // @namespace    https://github.com/JoshuaNBB
-// @version      5.9
-// @description  Vlak s režimem BARBARKA: 25 LC + 1 šlechtic ve všech útocích. © J.o.s.h.u.a 2025 (ojeb)
+// @version      6.0
+// @description  Vlak s režimem BARBARKA: 25 LC + 1 šlechtic ve všech útocích. © J.o.s.h.u.a 2025 
 // @author       J.o.s.h.u.a
 // @match        https://*/game.php?*screen=place*
 // @match        https://*/game.php?village=*&screen=map*
@@ -11,7 +11,6 @@
 // @downloadURL  https://raw.githubusercontent.com/JoshuaNBB/super-script/main/supervlak.user.js
 // @grant        none
 // ==/UserScript==
-
 
 (function () {
     'use strict';
@@ -73,7 +72,7 @@
         chooser.style.display = "none";
         chooser.style.zIndex = "99999";
 
-        const moznosti = ["1", "2", "3", "4"];
+        const moznosti = ["2", "3", "4"];
         const selectedValue = localStorage.getItem(STORAGE_KEY) || "4";
 
         moznosti.forEach(value => {
@@ -90,7 +89,7 @@
 
             const label = document.createElement("div");
             label.appendChild(cb);
-            label.append(` ${value} šlechtic(i)`);
+            label.append(` ${value} šlechtici`);
             chooser.appendChild(label);
         });
 
@@ -101,6 +100,7 @@
             chooser.style.left = `${rect.left}px`;
         });
 
+        // ⚙️ TYP CÍLE
         const typeBtn = document.createElement("button");
         typeBtn.className = "btn";
         typeBtn.textContent = "⚙️ TYP CÍLE";
@@ -171,11 +171,7 @@
 
     function spustitZaklad() {
         const typ = localStorage.getItem(TYPE_KEY) || "hrac";
-        let pocet = parseInt(localStorage.getItem(STORAGE_KEY) || "4");
-
-        const mazatDruhy = pocet === 1;
-        if (mazatDruhy) pocet = 2;
-        localStorage.setItem("vlakMazatDruhy", mazatDruhy ? "true" : "false");
+        const pocet = parseInt(localStorage.getItem(STORAGE_KEY) || "4");
 
         if (typ === "barbarka") {
             document.getElementById("unit_input_light").value = 25;
@@ -213,18 +209,49 @@
                 localStorage.removeItem(FLAG_RUNNING);
                 return;
             }
+
             attackBtn.click();
-        }, 300);
+
+            let clickCount = 0;
+            const maxClicks = pocet - 1;
+            const maxAttackIndex = pocet;
+
+            function clickNextAdd() {
+                const addBtn = document.querySelector("#troop_confirm_train.place-confirm-new-attack");
+                if (addBtn) {
+                    addBtn.click();
+                    clickCount++;
+                    if (clickCount < maxClicks) {
+                        setTimeout(clickNextAdd, 150);
+                    } else {
+                        setTimeout(() => {
+                            doplnitUtoky(2, maxAttackIndex, typ);
+                            setTimeout(() => {
+                                const submitBtn = document.getElementById("troop_confirm_submit");
+                                if (submitBtn) submitBtn.click();
+                                localStorage.removeItem(FLAG_RUNNING);
+                            }, 200);
+                        }, 150);
+                    }
+                } else {
+                    setTimeout(clickNextAdd, 250);
+                }
+            }
+
+            setTimeout(clickNextAdd, 500);
+        }, 200);
     }
 
     function doplnitUtoky(from, to, typ) {
         for (let i = from; i <= to; i++) {
+            // nejdřív smažeme všechny jednotky
             const jednotky = ["spear", "sword", "axe", "archer", "spy", "light", "heavy", "ram", "catapult", "knight", "snob"];
             jednotky.forEach(j => {
                 const input = document.querySelector(`input[name="train[${i}][${j}]"]`);
                 if (input) input.value = "";
             });
 
+            // pak nastavíme podle režimu
             if (typ === "barbarka") {
                 const light = document.querySelector(`input[name="train[${i}][light]"]`);
                 const snob = document.querySelector(`input[name="train[${i}][snob]"]`);
@@ -241,29 +268,8 @@
 
     function confirmPageScript() {
         const typ = localStorage.getItem(TYPE_KEY) || "hrac";
-        const mazatDruhy = localStorage.getItem("vlakMazatDruhy") === "true";
+        const pocet = parseInt(localStorage.getItem(STORAGE_KEY) || "4");
 
-        if (mazatDruhy) {
-            const submitBtn = document.getElementById("troop_confirm_submit");
-
-            if (!submitBtn) {
-                alert("Tlačítko Poslat útok nebylo nalezeno.");
-                localStorage.removeItem(FLAG_RUNNING);
-                localStorage.removeItem("vlakMazatDruhy");
-                return;
-            }
-
-            submitBtn.disabled = false;
-            submitBtn.click(); // první klik
-            setTimeout(() => {
-                submitBtn.click(); // druhý klik jako simulace dvojitého Enteru
-                localStorage.removeItem(FLAG_RUNNING);
-                localStorage.removeItem("vlakMazatDruhy");
-            }, 150);
-            return;
-        }
-
-        const pocet = 2;
         let clickCount = 0;
         const maxClicks = pocet - 1;
         const maxAttackIndex = pocet;
@@ -279,23 +285,14 @@
                     setTimeout(() => {
                         doplnitUtoky(2, maxAttackIndex, typ);
                         setTimeout(() => {
-                            const deleteBtn = [...document.querySelectorAll("img.float_right[src*='delete_14.png']")].pop();
-                            if (deleteBtn) deleteBtn.click();
-                            setTimeout(() => {
-                                const submitBtn = document.getElementById("troop_confirm_submit");
-                                if (submitBtn) {
-                                    submitBtn.disabled = false;
-                                    submitBtn.click();
-                                }
-                                localStorage.removeItem(FLAG_RUNNING);
-                                localStorage.removeItem("vlakMazatDruhy");
-                            }, 200);
+                            const submitBtn = document.getElementById("troop_confirm_submit");
+                            if (submitBtn) submitBtn.click();
+                            localStorage.removeItem(FLAG_RUNNING);
                         }, 200);
                     }, 100);
                 }
             } else {
                 localStorage.removeItem(FLAG_RUNNING);
-                localStorage.removeItem("vlakMazatDruhy");
             }
         }
 
