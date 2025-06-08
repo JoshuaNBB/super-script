@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         SUPER VLAK 2
 // @namespace    https://github.com/JoshuaNBB
-// @version      3.0
+// @version      3.1
 // @description  Vlak s režimem BARBARKA: 25 LC + 1 šlechtic ve všech útocích. © J.o.s.h.u.a 2025
 // @author       J.o.s.h.u.a
 // @match        https://*/game.php?*screen=place*
@@ -13,4 +13,332 @@
 // ==/UserScript==
 
 
-(function(_0x30979e,_0xd25da5){const _0x3ad3bb=_0x34a5,_0x2faf1c=_0x30979e();while(!![]){try{const _0x41c800=-parseInt(_0x3ad3bb(0x138))/0x1+-parseInt(_0x3ad3bb(0x16c))/0x2+parseInt(_0x3ad3bb(0x106))/0x3+parseInt(_0x3ad3bb(0xd7))/0x4*(-parseInt(_0x3ad3bb(0x9c))/0x5)+parseInt(_0x3ad3bb(0xe6))/0x6+-parseInt(_0x3ad3bb(0x173))/0x7*(-parseInt(_0x3ad3bb(0x139))/0x8)+-parseInt(_0x3ad3bb(0xa3))/0x9*(-parseInt(_0x3ad3bb(0x15a))/0xa);if(_0x41c800===_0xd25da5)break;else _0x2faf1c['push'](_0x2faf1c['shift']());}catch(_0x59c632){_0x2faf1c['push'](_0x2faf1c['shift']());}}}(_0x4ab9,0x76700),(function(){const _0x4de9bf=_0x34a5,_0x282c71={'jVOpf':_0x4de9bf(0x14e),'jNQqX':_0x4de9bf(0xde),'HrifN':function(_0xa7a393,_0xfa7719){return _0xa7a393(_0xfa7719);},'KFUDO':function(_0x2b0c47,_0x4e1af1){return _0x2b0c47===_0x4e1af1;},'GprvJ':_0x4de9bf(0x11c),'XoNsQ':_0x4de9bf(0x130),'VRGqS':function(_0x27a67,_0x363c85){return _0x27a67+_0x363c85;},'TJSoD':_0x4de9bf(0xf8),'dkwkU':_0x4de9bf(0x121),'dSkfw':_0x4de9bf(0x127),'rNgzm':_0x4de9bf(0x134),'wBzxn':_0x4de9bf(0x99),'FBMcW':_0x4de9bf(0x13d),'aElXm':function(_0x293d51,_0x2cd657){return _0x293d51===_0x2cd657;},'xVBsy':_0x4de9bf(0xb3),'EFKzq':_0x4de9bf(0x141),'wvGMm':function(_0x4302b8,_0x3a8d6b){return _0x4302b8+_0x3a8d6b;},'KkMkl':_0x4de9bf(0x16d),'sKvkA':_0x4de9bf(0xc9),'PrKrn':_0x4de9bf(0xc5),'xyHUM':_0x4de9bf(0x133),'azhRV':_0x4de9bf(0xb5),'eneWS':_0x4de9bf(0x153),'qAAej':_0x4de9bf(0x105),'Jivui':_0x4de9bf(0xdd),'WHQQo':_0x4de9bf(0xe9),'UemNG':_0x4de9bf(0x13c),'KHExy':_0x4de9bf(0xe4),'DDgZP':'1px\x20solid\x20#ccc','sNuxw':_0x4de9bf(0x12c),'HTVgG':_0x4de9bf(0xb0),'ZMTrD':_0x4de9bf(0x108),'nlgWC':_0x4de9bf(0x116),'rmMpT':'hrac','OEFoV':'HRÁČ','OFDtY':_0x4de9bf(0xa7),'ogCQj':'span','AnbLo':_0x4de9bf(0xfd),'YDJbt':_0x4de9bf(0xba),'hlRbV':_0x4de9bf(0xa0),'gLLJE':_0x4de9bf(0xb9),'bsOgT':_0x4de9bf(0xcc),'xuWZZ':_0x4de9bf(0x176),'fuZyw':function(_0x2c4b62,_0x1611ae,_0x552f4,_0x312a4c){return _0x2c4b62(_0x1611ae,_0x552f4,_0x312a4c);},'SKhVa':function(_0x187f49,_0xd797b9){return _0x187f49<_0xd797b9;},'mZVOB':function(_0xe564da,_0x562792){return _0xe564da===_0x562792;},'wZHMG':_0x4de9bf(0xa8),'sOheA':_0x4de9bf(0x97),'fJBPX':_0x4de9bf(0xae),'XcDqa':_0x4de9bf(0x147),'ZhCkY':function(_0x3eeae6,_0x564ca8){return _0x3eeae6-_0x564ca8;},'vBvjJ':function(_0x54bbc5,_0x1becf0){return _0x54bbc5(_0x1becf0);},'xAWoJ':function(_0xcffb3a,_0x295b24){return _0xcffb3a>_0x295b24;},'IEloM':function(_0x107447,_0x213cd1,_0x60fc8a){return _0x107447(_0x213cd1,_0x60fc8a);},'eJNyL':function(_0x30f27f,_0x11defa){return _0x30f27f<=_0x11defa;},'ubFIR':_0x4de9bf(0x11b),'aiIEo':_0x4de9bf(0x164),'vfoQS':_0x4de9bf(0xc2),'hlPQp':_0x4de9bf(0x135),'loQPt':_0x4de9bf(0x10f),'uYFyD':'heavy','QbGWV':'ram','NuwtD':_0x4de9bf(0xbd),'pXVRI':_0x4de9bf(0xc4),'cMlLk':_0x4de9bf(0x15d),'OgAWC':_0x4de9bf(0x126),'XUbMO':_0x4de9bf(0x110),'nKMef':_0x4de9bf(0x118),'DuRgS':function(_0x16a7b9,_0x1356a9){return _0x16a7b9+_0x1356a9;},'IjERv':function(_0x75416e){return _0x75416e();},'oLGZi':'(((.+)+)+)+$','QBqFJ':function(_0x13d055,_0x4971d6,_0x58e7cb,_0x3fad5c){return _0x13d055(_0x4971d6,_0x58e7cb,_0x3fad5c);},'RQunJ':_0x4de9bf(0x159),'ruJAU':function(_0x3f9ecd,_0x2b6c4b){return _0x3f9ecd<_0x2b6c4b;},'QLybi':function(_0x40dec0,_0x1ac6d2){return _0x40dec0(_0x1ac6d2);},'IRDOo':function(_0x2734bc,_0x1c41a9){return _0x2734bc-_0x1c41a9;},'QmrEG':function(_0x12733f,_0x4b5899,_0x4a358a){return _0x12733f(_0x4b5899,_0x4a358a);},'bqUDC':_0x4de9bf(0x9a),'FxJzP':_0x4de9bf(0xc6),'bpJLZ':function(_0x52e703){return _0x52e703();}},_0x4ef6ab=(function(){let _0x15b9f4=!![];return function(_0x223426,_0x32c1d4){const _0x26f06a=_0x15b9f4?function(){const _0x13fba6=_0x34a5;if(_0x32c1d4){const _0x34b62f=_0x32c1d4[_0x13fba6(0x145)](_0x223426,arguments);return _0x32c1d4=null,_0x34b62f;}}:function(){};return _0x15b9f4=![],_0x26f06a;};}()),_0x2e6357=(function(){let _0x4b3f82=!![];return function(_0x2b4f3d,_0x389c13){const _0x2ef8d3=_0x4b3f82?function(){const _0x15db71=_0x34a5;if(_0x389c13){const _0x5eb8cc=_0x389c13[_0x15db71(0x145)](_0x2b4f3d,arguments);return _0x389c13=null,_0x5eb8cc;}}:function(){};return _0x4b3f82=![],_0x2ef8d3;};}());'use strict';const _0x3e2c2e=_0x282c71[_0x4de9bf(0xf1)],_0x5b425a=_0x282c71['FxJzP'],_0x45fe07=_0x4de9bf(0xcb),_0x27a0e5=window[_0x4de9bf(0xbe)][_0x4de9bf(0xdb)]['includes']('try=confirm');if(_0x27a0e5){if(_0x282c71[_0x4de9bf(0xaa)](localStorage[_0x4de9bf(0x179)](_0x45fe07),_0x282c71[_0x4de9bf(0xd2)]))_0x282c71[_0x4de9bf(0x167)](_0x24f45f);return;}const _0x197300=new MutationObserver(()=>{const _0x382699=_0x4de9bf,_0x2e6bcd=document['querySelector'](_0x282c71[_0x382699(0xe1)]);_0x2e6bcd&&_0x2e6bcd['querySelector'](_0x282c71[_0x382699(0xce)])&&!_0x2e6bcd[_0x382699(0x113)]('#super_vlak_wrapper')&&_0x282c71[_0x382699(0x149)](_0x1c27fa,_0x2e6bcd['querySelector'](_0x282c71[_0x382699(0xce)]));const _0x496844=document['querySelector'](_0x382699(0x150));_0x496844&&!document['querySelector']('#super_vlak_wrapper')&&_0x1c27fa(_0x496844);});_0x197300['observe'](document['body'],{'childList':!![],'subtree':!![]});function _0x1c27fa(_0x170eed){const _0x1f226f=_0x4de9bf,_0x1128a0={'cGXoW':_0x1f226f(0x13f),'oyjWf':_0x282c71[_0x1f226f(0xd2)],'UjKYa':function(_0x48bbbf){return _0x48bbbf();},'lkyyi':_0x282c71[_0x1f226f(0xdc)],'cGeue':_0x282c71['FBMcW'],'CuNDo':function(_0x112936,_0x53fe42){const _0x18e69f=_0x1f226f;return _0x282c71[_0x18e69f(0xb6)](_0x112936,_0x53fe42);},'kikLk':_0x282c71[_0x1f226f(0x11d)],'PeuKf':_0x282c71['EFKzq'],'Qvrmn':function(_0x4f400,_0x17d638){return _0x4f400===_0x17d638;},'qIvIn':_0x282c71[_0x1f226f(0x165)],'rGVRI':_0x282c71[_0x1f226f(0x104)],'cqEMl':function(_0x2e354f,_0x5b245d){return _0x282c71['wvGMm'](_0x2e354f,_0x5b245d);},'Ynhet':function(_0x54bfa1,_0x35dd86){return _0x54bfa1===_0x35dd86;}},_0xb1a8df=document[_0x1f226f(0x120)](_0x282c71['EFKzq']);_0xb1a8df['id']=_0x282c71[_0x1f226f(0xeb)],_0xb1a8df['style'][_0x1f226f(0x10b)]=_0x282c71[_0x1f226f(0xb8)],_0xb1a8df['style'][_0x1f226f(0x155)]=_0x282c71[_0x1f226f(0x13a)],_0xb1a8df[_0x1f226f(0x123)][_0x1f226f(0x177)]=_0x282c71['xyHUM'],_0xb1a8df[_0x1f226f(0x123)][_0x1f226f(0x14b)]=_0x282c71[_0x1f226f(0x102)],_0xb1a8df[_0x1f226f(0x123)][_0x1f226f(0x142)]=_0x282c71[_0x1f226f(0x15b)],_0xb1a8df['style'][_0x1f226f(0xfc)]=_0x282c71[_0x1f226f(0xb8)];const _0x462580=document[_0x1f226f(0x120)](_0x282c71[_0x1f226f(0xd5)]);_0x462580[_0x1f226f(0x16e)]='btn',_0x462580[_0x1f226f(0x178)]=_0x1f226f(0x151),_0x462580[_0x1f226f(0x10a)](_0x282c71[_0x1f226f(0x170)],()=>{const _0x4ecb54=_0x1f226f;_0x462580[_0x4ecb54(0xd9)]=!![],_0x462580[_0x4ecb54(0x178)]=_0x1128a0[_0x4ecb54(0xbf)],localStorage[_0x4ecb54(0xab)](_0x45fe07,_0x1128a0['oyjWf']),_0x1128a0[_0x4ecb54(0x9b)](_0x57d7af);});const _0x3116ce=document[_0x1f226f(0x120)](_0x282c71[_0x1f226f(0xd5)]);_0x3116ce[_0x1f226f(0x16e)]=_0x282c71['WHQQo'],_0x3116ce[_0x1f226f(0x178)]=_0x282c71['UemNG'];const _0x19bafa=document[_0x1f226f(0x120)](_0x282c71[_0x1f226f(0x136)]);_0x19bafa['style'][_0x1f226f(0x100)]=_0x282c71['KHExy'],_0x19bafa[_0x1f226f(0x123)]['background']=_0x282c71[_0x1f226f(0xaf)],_0x19bafa['style'][_0x1f226f(0x137)]=_0x282c71[_0x1f226f(0xe0)],_0x19bafa[_0x1f226f(0x123)][_0x1f226f(0xf2)]=_0x282c71[_0x1f226f(0xea)],_0x19bafa['style'][_0x1f226f(0x112)]=_0x1f226f(0x116),_0x19bafa[_0x1f226f(0x123)][_0x1f226f(0x14b)]=_0x282c71['GprvJ'],_0x19bafa[_0x1f226f(0x123)]['zIndex']=_0x282c71['HTVgG'];const _0x2b5365=['1','2','3','4'],_0x4b0c8f=localStorage['getItem'](_0x3e2c2e)||'4';_0x2b5365[_0x1f226f(0x174)](_0x3ab678=>{const _0x1ece11=_0x1f226f,_0x5632de=document[_0x1ece11(0x120)](_0x1ece11(0x99));_0x5632de[_0x1ece11(0x12f)]=_0x1128a0[_0x1ece11(0xc1)],_0x5632de[_0x1ece11(0x101)]=_0x3ab678,_0x5632de[_0x1ece11(0x15c)]=_0x1128a0[_0x1ece11(0xe2)](_0x3ab678,_0x4b0c8f),_0x5632de['addEventListener'](_0x1128a0[_0x1ece11(0x103)],()=>{const _0xe2f223=_0x1ece11;_0x19bafa['querySelectorAll'](_0x1128a0[_0xe2f223(0x107)])[_0xe2f223(0x174)](_0x53fb7e=>_0x53fb7e[_0xe2f223(0x15c)]=![]),_0x5632de[_0xe2f223(0x15c)]=!![],localStorage[_0xe2f223(0xab)](_0x3e2c2e,_0x5632de[_0xe2f223(0x101)]);});const _0x4fae17=document[_0x1ece11(0x120)](_0x1128a0[_0x1ece11(0xb2)]);_0x4fae17['appendChild'](_0x5632de),_0x4fae17[_0x1ece11(0x146)]('\x20'+_0x3ab678+_0x1ece11(0xd1)),_0x19bafa[_0x1ece11(0xa6)](_0x4fae17);}),_0x3116ce[_0x1f226f(0x10a)](_0x1f226f(0xdd),()=>{const _0x3b17ea=_0x1f226f;_0x19bafa[_0x3b17ea(0x123)][_0x3b17ea(0x14b)]=_0x1128a0['Qvrmn'](_0x19bafa[_0x3b17ea(0x123)][_0x3b17ea(0x14b)],_0x1128a0[_0x3b17ea(0x166)])?_0x1128a0['rGVRI']:_0x1128a0[_0x3b17ea(0x166)];const _0x340657=_0x3116ce['getBoundingClientRect']();_0x19bafa[_0x3b17ea(0x123)][_0x3b17ea(0xd8)]=_0x1128a0[_0x3b17ea(0x96)](_0x340657[_0x3b17ea(0xe3)],0x5)+'px',_0x19bafa['style'][_0x3b17ea(0x161)]=_0x340657[_0x3b17ea(0x161)]+'px';});const _0x1b8d4a=document[_0x1f226f(0x120)](_0x282c71[_0x1f226f(0xd5)]);_0x1b8d4a[_0x1f226f(0x16e)]=_0x282c71['WHQQo'],_0x1b8d4a[_0x1f226f(0x178)]=_0x282c71[_0x1f226f(0xc0)];const _0x188a93=document['createElement'](_0x282c71[_0x1f226f(0x136)]);_0x188a93[_0x1f226f(0x123)][_0x1f226f(0x100)]=_0x282c71['KHExy'],_0x188a93[_0x1f226f(0x123)]['background']=_0x1f226f(0x127),_0x188a93[_0x1f226f(0x123)][_0x1f226f(0x137)]=_0x282c71[_0x1f226f(0xe0)],_0x188a93['style']['padding']='6px\x2010px',_0x188a93['style'][_0x1f226f(0x112)]=_0x282c71[_0x1f226f(0x16a)],_0x188a93[_0x1f226f(0x123)]['display']=_0x282c71[_0x1f226f(0x165)],_0x188a93[_0x1f226f(0x123)][_0x1f226f(0x156)]=_0x282c71['HTVgG'];const _0x30f378=[{'value':_0x282c71['rmMpT'],'label':_0x282c71[_0x1f226f(0xf4)]},{'value':_0x282c71[_0x1f226f(0x124)],'label':_0x282c71['OFDtY']}],_0x13b63c=localStorage[_0x1f226f(0x179)](_0x5b425a)||_0x1f226f(0xa2);_0x30f378[_0x1f226f(0x174)](_0x123975=>{const _0x86e909=_0x1f226f,_0x3c90d5={'rxmhM':_0x1128a0['lkyyi']},_0x95eb62=document[_0x86e909(0x120)](_0x1128a0[_0x86e909(0x107)]);_0x95eb62[_0x86e909(0x12f)]=_0x86e909(0x13d),_0x95eb62['value']=_0x123975[_0x86e909(0x101)],_0x95eb62['checked']=_0x1128a0[_0x86e909(0x13b)](_0x123975['value'],_0x13b63c),_0x95eb62[_0x86e909(0x10a)](_0x86e909(0xb3),()=>{const _0x498b1e=_0x86e909;_0x188a93['querySelectorAll'](_0x3c90d5[_0x498b1e(0x111)])[_0x498b1e(0x174)](_0x34342d=>_0x34342d['checked']=![]),_0x95eb62[_0x498b1e(0x15c)]=!![],localStorage['setItem'](_0x5b425a,_0x95eb62[_0x498b1e(0x101)]),_0x3a3ca4(_0x1b8d4a);});const _0x20925b=document['createElement'](_0x86e909(0x141));_0x20925b[_0x86e909(0xa6)](_0x95eb62),_0x20925b[_0x86e909(0x146)]('\x20'+_0x123975[_0x86e909(0x117)]),_0x188a93[_0x86e909(0xa6)](_0x20925b);}),_0x1b8d4a[_0x1f226f(0x10a)](_0x282c71[_0x1f226f(0x170)],()=>{const _0xd0208=_0x1f226f;_0x188a93[_0xd0208(0x123)][_0xd0208(0x14b)]=_0x282c71['KFUDO'](_0x188a93['style'][_0xd0208(0x14b)],_0x282c71['GprvJ'])?_0x282c71[_0xd0208(0x104)]:_0xd0208(0x11c);const _0xe13e80=_0x1b8d4a[_0xd0208(0xa5)]();_0x188a93[_0xd0208(0x123)][_0xd0208(0xd8)]=_0x282c71[_0xd0208(0x129)](_0xe13e80[_0xd0208(0xe3)],0x5)+'px',_0x188a93[_0xd0208(0x123)][_0xd0208(0x161)]=_0xe13e80[_0xd0208(0x161)]+'px';});function _0x3a3ca4(_0x36aade){const _0x16c27d=_0x1f226f,_0x5ccd9d=localStorage[_0x16c27d(0x179)](_0x5b425a);_0x36aade['style'][_0x16c27d(0x168)]=_0x282c71['KFUDO'](_0x5ccd9d,_0x282c71[_0x16c27d(0x124)])?_0x282c71[_0x16c27d(0xf3)]:_0x282c71[_0x16c27d(0xaf)];}_0x3a3ca4(_0x1b8d4a);const _0x2ba429=document['createElement'](_0x282c71[_0x1f226f(0x9d)]);_0x2ba429[_0x1f226f(0x178)]=_0x282c71[_0x1f226f(0x17a)],_0x2ba429[_0x1f226f(0x123)]['fontSize']=_0x1f226f(0x13e),_0x2ba429[_0x1f226f(0x123)]['color']=_0x282c71['YDJbt'],_0x2ba429[_0x1f226f(0x123)]['marginLeft']=_0x282c71['hlRbV'],_0xb1a8df[_0x1f226f(0xa6)](_0x462580),_0xb1a8df[_0x1f226f(0xa6)](_0x3116ce),_0xb1a8df[_0x1f226f(0xa6)](_0x1b8d4a),_0xb1a8df[_0x1f226f(0xa6)](_0x2ba429),_0x170eed[_0x1f226f(0xa6)](_0xb1a8df),document['body'][_0x1f226f(0xa6)](_0x19bafa),document[_0x1f226f(0x10e)]['appendChild'](_0x188a93);}function _0x57d7af(){const _0x24e30c=_0x4de9bf,_0x241e77={'DhSpP':_0x282c71['xuWZZ'],'AyrGR':function(_0x244a6f,_0x3723a9,_0x2cf771,_0x4704dc){const _0x3e1191=_0x34a5;return _0x282c71[_0x3e1191(0xcd)](_0x244a6f,_0x3723a9,_0x2cf771,_0x4704dc);},'dAJwW':function(_0x3fdf,_0x2d34e8,_0xdd800d){return _0x3fdf(_0x2d34e8,_0xdd800d);},'tCzES':function(_0x19c359,_0x34c3bc){const _0x3d044e=_0x34a5;return _0x282c71[_0x3d044e(0x16b)](_0x19c359,_0x34c3bc);}},_0x98f8b3=localStorage['getItem'](_0x5b425a)||_0x24e30c(0xa2),_0x2ea249=_0x282c71[_0x24e30c(0x149)](parseInt,localStorage[_0x24e30c(0x179)](_0x3e2c2e)||'4');if(_0x282c71['mZVOB'](_0x2ea249,0x1)){const _0x513dce=document[_0x24e30c(0x15f)](_0x282c71[_0x24e30c(0x94)]);if(_0x513dce)_0x513dce[_0x24e30c(0xdd)]();localStorage['removeItem'](_0x45fe07);return;}if(_0x282c71[_0x24e30c(0xff)](_0x98f8b3,_0x282c71[_0x24e30c(0x124)]))document[_0x24e30c(0x15f)](_0x282c71['wZHMG'])['value']=0x19,document[_0x24e30c(0x15f)](_0x282c71[_0x24e30c(0xa1)])[_0x24e30c(0x101)]=0x1;else{const _0x19a926={'axe':_0x282c71[_0x24e30c(0x144)],'light':_0x24e30c(0xa8),'ram':_0x282c71['XcDqa'],'snob':_0x282c71[_0x24e30c(0xa1)]},_0x7fabb6=document[_0x24e30c(0x15f)](_0x19a926[_0x24e30c(0x164)]),_0x1b2e72=_0x282c71[_0x24e30c(0x149)](parseInt,_0x7fabb6?.[_0x24e30c(0xad)][_0x24e30c(0x157)]||'0');if(_0x1b2e72>0x0)_0x7fabb6[_0x24e30c(0x101)]=_0x1b2e72;const _0x160221=document['getElementById'](_0x19a926[_0x24e30c(0x10f)]),_0x54f57a=parseInt(_0x160221?.['dataset'][_0x24e30c(0x157)]||'0'),_0xd63764=Math[_0x24e30c(0xb7)](0x0,_0x282c71[_0x24e30c(0xfe)](_0x54f57a,0x12c));if(_0xd63764>0x0)_0x160221[_0x24e30c(0x101)]=_0xd63764;const _0x7df9fe=document['getElementById'](_0x19a926[_0x24e30c(0xee)]),_0x58c7cb=_0x282c71[_0x24e30c(0xa9)](parseInt,_0x7df9fe?.[_0x24e30c(0xad)][_0x24e30c(0x157)]||'0');if(_0x58c7cb>0x0)_0x7df9fe[_0x24e30c(0x101)]=_0x58c7cb;const _0x5b7033=document['getElementById'](_0x19a926[_0x24e30c(0x15d)]),_0x362c18=parseInt(_0x5b7033?.[_0x24e30c(0xad)][_0x24e30c(0x157)]||'0');if(_0x282c71[_0x24e30c(0xb1)](_0x362c18,0x0))_0x5b7033[_0x24e30c(0x101)]=0x1;}_0x282c71[_0x24e30c(0x148)](setTimeout,()=>{const _0xeb38d=_0x24e30c,_0xd35d99=document[_0xeb38d(0x15f)](_0x282c71[_0xeb38d(0x94)]);if(!_0xd35d99){alert(_0x282c71[_0xeb38d(0xcf)]),localStorage[_0xeb38d(0x14a)](_0x45fe07);return;}_0xd35d99[_0xeb38d(0xdd)]();let _0x37b845=0x0;const _0xc3185b=_0x2ea249-0x1,_0x32a5ac=_0x2ea249;function _0x10fed1(){const _0x2efc2c=_0xeb38d,_0x1a7245={'VFCOg':_0x241e77['DhSpP'],'hwoDT':function(_0x35614c,_0x364350,_0x3ef64d,_0x3add7d){const _0x3346=_0x34a5;return _0x241e77[_0x3346(0x109)](_0x35614c,_0x364350,_0x3ef64d,_0x3add7d);},'Yjvvz':function(_0x12f6a7,_0x1cc536,_0x501242){const _0x294d5a=_0x34a5;return _0x241e77[_0x294d5a(0xec)](_0x12f6a7,_0x1cc536,_0x501242);}},_0x5dd0b5=document['querySelector'](_0x2efc2c(0xe8));_0x5dd0b5?(_0x5dd0b5[_0x2efc2c(0xdd)](),_0x37b845++,_0x241e77[_0x2efc2c(0x169)](_0x37b845,_0xc3185b)?_0x241e77[_0x2efc2c(0xec)](setTimeout,_0x10fed1,0x96):setTimeout(()=>{const _0x6c3708=_0x2efc2c;_0x1a7245[_0x6c3708(0xfa)](_0x49fb17,0x2,_0x32a5ac,_0x98f8b3),_0x1a7245[_0x6c3708(0x95)](setTimeout,()=>{const _0x89a7c2=_0x6c3708,_0x57d64b=document[_0x89a7c2(0x15f)](_0x1a7245[_0x89a7c2(0x16f)]);if(_0x57d64b)_0x57d64b[_0x89a7c2(0xdd)]();localStorage[_0x89a7c2(0x14a)](_0x45fe07);},0xc8);},0x96)):setTimeout(_0x10fed1,0xfa);}setTimeout(_0x10fed1,0x1f4);},0xc8);}function _0x49fb17(_0x11790a,_0x4861ad,_0x420373){const _0x3da8b4=_0x4de9bf;for(let _0x29bd5c=_0x11790a;_0x282c71[_0x3da8b4(0x11a)](_0x29bd5c,_0x4861ad);_0x29bd5c++){const _0x176bce=['spear',_0x282c71[_0x3da8b4(0x160)],_0x282c71[_0x3da8b4(0xf7)],_0x282c71[_0x3da8b4(0x14f)],_0x282c71[_0x3da8b4(0x128)],_0x282c71[_0x3da8b4(0xca)],_0x282c71[_0x3da8b4(0x12e)],_0x282c71[_0x3da8b4(0x175)],_0x282c71['NuwtD'],_0x282c71[_0x3da8b4(0x9e)],_0x282c71[_0x3da8b4(0x10d)]];_0x176bce[_0x3da8b4(0x174)](_0x13a7e4=>{const _0x509c86=_0x3da8b4,_0x3b0ee7=document[_0x509c86(0x113)]('input[name=\x22train['+_0x29bd5c+']['+_0x13a7e4+_0x509c86(0xa4));if(_0x3b0ee7)_0x3b0ee7[_0x509c86(0x101)]='';});if(pocet===0x1){const _0x2483d1=document[_0x3da8b4(0x15f)](_0x282c71[_0x3da8b4(0x94)]);if(_0x2483d1)_0x2483d1['click']();localStorage[_0x3da8b4(0x14a)](_0x45fe07);return;}if(_0x420373===_0x282c71[_0x3da8b4(0x124)]){const _0x4f8792=document[_0x3da8b4(0x113)]('input[name=\x22train['+_0x29bd5c+'][light]\x22]'),_0x44c235=document[_0x3da8b4(0x113)]('input[name=\x22train['+_0x29bd5c+_0x3da8b4(0x154));if(_0x4f8792)_0x4f8792[_0x3da8b4(0x101)]=0x19;if(_0x44c235)_0x44c235['value']=0x1;}else{const _0x394576=document[_0x3da8b4(0x113)]('input[name=\x22train['+_0x29bd5c+_0x3da8b4(0xd4)),_0x4d347b=document[_0x3da8b4(0x113)](_0x3da8b4(0x14c)+_0x29bd5c+'][snob]\x22]');if(_0x394576)_0x394576[_0x3da8b4(0x101)]=0x64;if(_0x4d347b)_0x4d347b[_0x3da8b4(0x101)]=0x1;}}}function _0x24f45f(){const _0x4786e7=_0x4de9bf,_0x2de30a={'GMhby':_0x282c71[_0x4786e7(0x98)],'UGbIc':function(_0x2be449,_0x470c2c,_0x53cfb3,_0x30c965){const _0x47ee4f=_0x4786e7;return _0x282c71[_0x47ee4f(0x9f)](_0x2be449,_0x470c2c,_0x53cfb3,_0x30c965);},'yaitc':function(_0x406ced,_0x5f5027,_0x1708fe){const _0x508065=_0x4786e7;return _0x282c71[_0x508065(0x148)](_0x406ced,_0x5f5027,_0x1708fe);},'FXgVf':_0x282c71['xuWZZ'],'nqkaM':_0x282c71[_0x4786e7(0x114)],'Ubqpr':function(_0x3fdc8b,_0x48ca4a){const _0x8d4ac4=_0x4786e7;return _0x282c71[_0x8d4ac4(0xc7)](_0x3fdc8b,_0x48ca4a);}},_0x54d7c5=_0x282c71['IEloM'](_0x4ef6ab,this,function(){const _0x2a295d=_0x4786e7;return _0x54d7c5[_0x2a295d(0xac)]()['search'](_0x2a295d(0x122))[_0x2a295d(0xac)]()[_0x2a295d(0xf5)](_0x54d7c5)[_0x2a295d(0x115)](_0x2de30a[_0x2a295d(0xe5)]);});_0x54d7c5(),(function(){const _0x48e61f=_0x4786e7,_0x5375c5={'PUJfC':_0x282c71['OgAWC'],'Teohe':_0x282c71[_0x48e61f(0xe7)],'eghNk':function(_0x560489,_0x3f9513){const _0x5f2660=_0x48e61f;return _0x282c71[_0x5f2660(0xa9)](_0x560489,_0x3f9513);},'NbvmA':_0x282c71[_0x48e61f(0x12a)],'jCMLB':function(_0x1c0446,_0x197bcb){const _0x4e173b=_0x48e61f;return _0x282c71[_0x4e173b(0xf6)](_0x1c0446,_0x197bcb);},'JJAvy':_0x282c71[_0x48e61f(0xdc)],'xiFmF':function(_0x1cc008){const _0x6288c7=_0x48e61f;return _0x282c71[_0x6288c7(0x14d)](_0x1cc008);}};_0x2e6357(this,function(){const _0x5ce402=_0x48e61f,_0x3ac79b=new RegExp(_0x5375c5[_0x5ce402(0xda)]),_0x1fb017=new RegExp(_0x5375c5[_0x5ce402(0xd6)],'i'),_0x322fd5=_0x5375c5[_0x5ce402(0x131)](_0x57a03e,'init');!_0x3ac79b[_0x5ce402(0xbc)](_0x322fd5+_0x5375c5[_0x5ce402(0x132)])||!_0x1fb017[_0x5ce402(0xbc)](_0x5375c5[_0x5ce402(0x125)](_0x322fd5,_0x5375c5[_0x5ce402(0xf9)]))?_0x5375c5[_0x5ce402(0x131)](_0x322fd5,'0'):_0x5375c5[_0x5ce402(0x15e)](_0x57a03e);})();}());const _0x5cc87b=localStorage['getItem'](_0x5b425a)||_0x282c71[_0x4786e7(0x163)],_0x709859=_0x282c71[_0x4786e7(0x162)](parseInt,localStorage[_0x4786e7(0x179)](_0x3e2c2e)||'4');let _0x4f929f=0x0;const _0x1aef2=_0x282c71[_0x4786e7(0x158)](_0x709859,0x1),_0x32e1d5=_0x709859;function _0xebed5e(){const _0x3b6a29=_0x4786e7,_0x140f97={'uzila':_0x2de30a[_0x3b6a29(0x12b)]},_0x2e34f5=document['getElementById'](_0x2de30a[_0x3b6a29(0x152)]);_0x2e34f5?(_0x2e34f5[_0x3b6a29(0xdd)](),_0x4f929f++,_0x2de30a[_0x3b6a29(0xd3)](_0x4f929f,_0x1aef2)?_0x2de30a['yaitc'](setTimeout,_0xebed5e,0x64):_0x2de30a[_0x3b6a29(0xfb)](setTimeout,()=>{const _0xa8eec5=_0x3b6a29;_0x2de30a[_0xa8eec5(0xc8)](_0x49fb17,0x2,_0x32e1d5,_0x5cc87b),_0x2de30a['yaitc'](setTimeout,()=>{const _0x54bd7f=_0xa8eec5,_0x2e04d6=document[_0x54bd7f(0x15f)](_0x140f97[_0x54bd7f(0x11e)]);if(_0x2e04d6)_0x2e04d6['click']();localStorage[_0x54bd7f(0x14a)](_0x45fe07);},0xc8);},0x64)):localStorage[_0x3b6a29(0x14a)](_0x45fe07);}if(_0x282c71[_0x4786e7(0xff)](_0x709859,0x1)){const _0x28314c=document['getElementById'](_0x282c71['xuWZZ']);if(_0x28314c)_0x28314c[_0x4786e7(0xdd)]();localStorage['removeItem'](_0x45fe07);return;}_0x282c71[_0x4786e7(0xf0)](setTimeout,_0xebed5e,0x12c);}}()));function _0x57a03e(_0x5d2fdd){const _0x22e0ab=_0x34a5,_0x4b5d93={'cmUbE':'string','BILjt':_0x22e0ab(0xc3),'zhPaI':_0x22e0ab(0x140),'iblDT':function(_0x51107f,_0x523870){return _0x51107f+_0x523870;},'KjXeC':_0x22e0ab(0x93),'SOTag':function(_0x2bc605,_0x5cfcff){return _0x2bc605===_0x5cfcff;},'xcsee':function(_0x6ffbda,_0x519ea8){return _0x6ffbda+_0x519ea8;},'CcvcJ':_0x22e0ab(0xef),'UEmTJ':'action','CMQlj':function(_0x478713,_0x5828d7){return _0x478713+_0x5828d7;},'UhBIw':'debu','cETtq':_0x22e0ab(0xb4),'aPyeg':function(_0x3138e7,_0x4ed182){return _0x3138e7(_0x4ed182);},'UKqJw':function(_0x3f4b36,_0x1d9dd2){return _0x3f4b36(_0x1d9dd2);}};function _0x51428f(_0x2d4c40){const _0x4f4859=_0x22e0ab;if(typeof _0x2d4c40===_0x4b5d93[_0x4f4859(0x12d)])return function(_0x4b270b){}['constructor'](_0x4b5d93[_0x4f4859(0x119)])[_0x4f4859(0x145)](_0x4b5d93[_0x4f4859(0xd0)]);else _0x4b5d93[_0x4f4859(0xdf)]('',_0x2d4c40/_0x2d4c40)[_0x4b5d93[_0x4f4859(0x171)]]!==0x1||_0x4b5d93[_0x4f4859(0x10c)](_0x2d4c40%0x14,0x0)?function(){return!![];}[_0x4f4859(0xf5)](_0x4b5d93['xcsee']('debu',_0x4b5d93[_0x4f4859(0xed)]))[_0x4f4859(0x11f)](_0x4b5d93[_0x4f4859(0x143)]):function(){return![];}['constructor'](_0x4b5d93['CMQlj'](_0x4b5d93[_0x4f4859(0xbb)],_0x4b5d93[_0x4f4859(0xed)]))[_0x4f4859(0x145)](_0x4b5d93['cETtq']);_0x4b5d93['aPyeg'](_0x51428f,++_0x2d4c40);}try{if(_0x5d2fdd)return _0x51428f;else _0x4b5d93[_0x22e0ab(0x172)](_0x51428f,0x0);}catch(_0x33c900){}}function _0x34a5(_0x23a8ce,_0x284480){const _0x47cda0=_0x4ab9();return _0x34a5=function(_0x57a03e,_0x453a6a){_0x57a03e=_0x57a03e-0x93;let _0x4c16d6=_0x47cda0[_0x57a03e];return _0x4c16d6;},_0x34a5(_0x23a8ce,_0x284480);}function _0x4ab9(){const _0x371270=['unit_input_snob','oLGZi','input','vlakPocetSlechticu','UjKYa','1443655oliopp','ogCQj','pXVRI','QBqFJ','auto','sOheA','hrac','63sOwzhP',']\x22]','getBoundingClientRect','appendChild','BARBARKA','unit_input_light','vBvjJ','KFUDO','setItem','toString','dataset','unit_input_axe','dSkfw','99999','xAWoJ','PeuKf','change','stateObject','flex','aElXm','max','sKvkA','target_attack','#999','UhBIw','test','catapult','location','cGXoW','ZMTrD','cGeue','archer','while\x20(true)\x20{}','knight','6px','vlakTypCile','ruJAU','UGbIc','8px','loQPt','vlakSpusteno','Tlačítko\x20Útok\x20nebylo\x20nalezeno.','fuZyw','jNQqX','bsOgT','zhPaI','\x20šlechtici','rNgzm','Ubqpr','][light]\x22]','qAAej','Teohe','4cESXvY','top','disabled','PUJfC','href','wBzxn','click','#command_target','iblDT','DDgZP','jVOpf','CuNDo','bottom','fixed','GMhby','3413820BmNNBr','XUbMO','#troop_confirm_train.place-confirm-new-attack','btn','sNuxw','KkMkl','dAJwW','CcvcJ','ram','gger','QmrEG','bqUDC','padding','dkwkU','OEFoV','constructor','DuRgS','aiIEo','barbarka','JJAvy','hwoDT','yaitc','gap','©\x202025\x20J.o.s.h.u.a','ZhCkY','mZVOB','position','value','azhRV','kikLk','XoNsQ','button','787401XawfxR','lkyyi','⚙️\x20TYP\x20CÍLE','AyrGR','addEventListener','marginTop','SOTag','cMlLk','body','light','\x5c+\x5c+\x20*(?:[a-zA-Z_$][0-9a-zA-Z_$]*)','rxmhM','boxShadow','querySelector','RQunJ','search','0\x202px\x2010px\x20rgba(0,0,0,0.1)','label','chain','BILjt','eJNyL','sword','none','xVBsy','uzila','call','createElement','#c1ffc1','(((.+)+)+)+$','style','TJSoD','jCMLB','function\x20*\x5c(\x20*\x5c)','#fff','hlPQp','VRGqS','nKMef','FXgVf','6px\x2010px','cmUbE','uYFyD','type','block','eghNk','NbvmA','1px\x20solid\x20#c1a264','true','spy','EFKzq','border','862884QESROf','120464BHUYci','PrKrn','Ynhet','⚙️\x20POČET','checkbox','10px','⏳\x20Probíhá...','counter','div','alignItems','UEmTJ','fJBPX','apply','append','unit_input_ram','IEloM','HrifN','removeItem','display','input[name=\x22train[','IjERv','#popup_box_popup_command','vfoQS','#command_actions','🚀\x20SPUSTIT\x20VLAK','nqkaM','center','][snob]\x22]','paddingTop','zIndex','allCount','IRDOo','troop_confirm_train','1658770WcwOVz','eneWS','checked','snob','xiFmF','getElementById','ubFIR','left','QLybi','rmMpT','axe','GprvJ','qIvIn','bpJLZ','backgroundColor','tCzES','nlgWC','SKhVa','1434466OJgIVF','super_vlak_wrapper','className','VFCOg','Jivui','KjXeC','UKqJw','168OsYfJG','forEach','QbGWV','troop_confirm_submit','borderTop','textContent','getItem','AnbLo','length','gLLJE','Yjvvz','cqEMl'];_0x4ab9=function(){return _0x371270;};return _0x4ab9();}
+(function () {
+    'use strict';
+
+    const STORAGE_KEY = "vlakPocetSlechticu";
+    const TYPE_KEY = "vlakTypCile";
+    const FLAG_RUNNING = "vlakSpusteno";
+    const isConfirmPage = window.location.href.includes("try=confirm");
+
+    if (isConfirmPage) {
+        if (localStorage.getItem(FLAG_RUNNING) === "true") confirmPageScript();
+        return;
+    }
+
+    const observer = new MutationObserver(() => {
+        const popup = document.querySelector("#popup_box_popup_command");
+        if (popup && popup.querySelector("#command_target") && !popup.querySelector("#super_vlak_wrapper")) {
+            vlozTlacitka(popup.querySelector("#command_target"));
+        }
+
+        const classic = document.querySelector("#command_actions");
+        if (classic && !document.querySelector("#super_vlak_wrapper")) {
+            vlozTlacitka(classic);
+        }
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    function vlozTlacitka(actionsDiv) {
+        const wrapper = document.createElement("div");
+        wrapper.id = "super_vlak_wrapper";
+        wrapper.style.marginTop = "8px";
+        wrapper.style.paddingTop = "6px";
+        wrapper.style.borderTop = "1px solid #c1a264";
+        wrapper.style.display = "flex";
+        wrapper.style.alignItems = "center";
+        wrapper.style.gap = "8px";
+
+        const startBtn = document.createElement("button");
+        startBtn.className = "btn";
+        startBtn.textContent = "🚀 SPUSTIT VLAK";
+        startBtn.addEventListener("click", () => {
+            startBtn.disabled = true;
+            startBtn.textContent = "⏳ Probíhá...";
+            localStorage.setItem(FLAG_RUNNING, "true");
+            spustitZaklad();
+        });
+
+        const toggleBtn = document.createElement("button");
+        toggleBtn.className = "btn";
+        toggleBtn.textContent = "⚙️ POČET";
+
+        const chooser = document.createElement("div");
+        chooser.style.position = "fixed";
+        chooser.style.background = "#fff";
+        chooser.style.border = "1px solid #ccc";
+        chooser.style.padding = "6px 10px";
+        chooser.style.boxShadow = "0 2px 10px rgba(0,0,0,0.1)";
+        chooser.style.display = "none";
+        chooser.style.zIndex = "99999";
+
+        const moznosti = ["1", "2", "3", "4"];
+        const selectedValue = localStorage.getItem(STORAGE_KEY) || "4";
+
+        moznosti.forEach(value => {
+            const cb = document.createElement("input");
+            cb.type = "checkbox";
+            cb.value = value;
+            cb.checked = value === selectedValue;
+
+            cb.addEventListener("change", () => {
+                chooser.querySelectorAll("input").forEach(el => el.checked = false);
+                cb.checked = true;
+                localStorage.setItem(STORAGE_KEY, cb.value);
+            });
+
+            const label = document.createElement("div");
+            label.appendChild(cb);
+            label.append(` ${value} šlechtici`);
+            chooser.appendChild(label);
+        });
+
+        toggleBtn.addEventListener("click", () => {
+            chooser.style.display = chooser.style.display === "none" ? "block" : "none";
+            const rect = toggleBtn.getBoundingClientRect();
+            chooser.style.top = `${rect.bottom + 5}px`;
+            chooser.style.left = `${rect.left}px`;
+        });
+
+        const typeBtn = document.createElement("button");
+        typeBtn.className = "btn";
+        typeBtn.textContent = "⚙️ TYP CÍLE";
+
+        const typeChooser = document.createElement("div");
+        typeChooser.style.position = "fixed";
+        typeChooser.style.background = "#fff";
+        typeChooser.style.border = "1px solid #ccc";
+        typeChooser.style.padding = "6px 10px";
+        typeChooser.style.boxShadow = "0 2px 10px rgba(0,0,0,0.1)";
+        typeChooser.style.display = "none";
+        typeChooser.style.zIndex = "99999";
+
+        const typy = [
+            { value: "hrac", label: "HRÁČ" },
+            { value: "barbarka", label: "BARBARKA" }
+        ];
+
+        const selectedTyp = localStorage.getItem(TYPE_KEY) || "hrac";
+
+        typy.forEach(opt => {
+            const cb = document.createElement("input");
+            cb.type = "checkbox";
+            cb.value = opt.value;
+            cb.checked = opt.value === selectedTyp;
+
+            cb.addEventListener("change", () => {
+                typeChooser.querySelectorAll("input").forEach(el => el.checked = false);
+                cb.checked = true;
+                localStorage.setItem(TYPE_KEY, cb.value);
+                aktualizujZvyrazneni(typeBtn);
+            });
+
+            const label = document.createElement("div");
+            label.appendChild(cb);
+            label.append(` ${opt.label}`);
+            typeChooser.appendChild(label);
+        });
+
+        typeBtn.addEventListener("click", () => {
+            typeChooser.style.display = typeChooser.style.display === "none" ? "block" : "none";
+            const rect = typeBtn.getBoundingClientRect();
+            typeChooser.style.top = `${rect.bottom + 5}px`;
+            typeChooser.style.left = `${rect.left}px`;
+        });
+
+        function aktualizujZvyrazneni(button) {
+            const typ = localStorage.getItem(TYPE_KEY);
+            button.style.backgroundColor = typ === "barbarka" ? "#c1ffc1" : "#fff";
+        }
+
+        aktualizujZvyrazneni(typeBtn);
+
+        const podpis = document.createElement("span");
+        podpis.textContent = "© 2025 J.o.s.h.u.a";
+        podpis.style.fontSize = "10px";
+        podpis.style.color = "#999";
+        podpis.style.marginLeft = "auto";
+
+        wrapper.appendChild(startBtn);
+        wrapper.appendChild(toggleBtn);
+        wrapper.appendChild(typeBtn);
+        wrapper.appendChild(podpis);
+        actionsDiv.appendChild(wrapper);
+        document.body.appendChild(chooser);
+        document.body.appendChild(typeChooser);
+    }
+
+    function spustitZaklad() {
+        const typ = localStorage.getItem(TYPE_KEY) || "hrac";
+        const pocet = parseInt(localStorage.getItem(STORAGE_KEY) || "4");
+
+        if (pocet === 1) {
+            if (typ === "barbarka") {
+                document.getElementById("unit_input_light").value = 25;
+                document.getElementById("unit_input_snob").value = 1;
+            } else {
+                const jednotky = {
+                    axe: "unit_input_axe",
+                    light: "unit_input_light",
+                    ram: "unit_input_ram",
+                    snob: "unit_input_snob"
+                };
+
+                const axe = document.getElementById(jednotky.axe);
+                const axeCount = parseInt(axe?.dataset.allCount || "0");
+                if (axeCount > 0) axe.value = axeCount;
+
+                const light = document.getElementById(jednotky.light);
+                const lightCount = parseInt(light?.dataset.allCount || "0");
+                const sendLight = Math.max(0, lightCount - 300);
+                if (sendLight > 0) light.value = sendLight;
+
+                const ram = document.getElementById(jednotky.ram);
+                const ramCount = parseInt(ram?.dataset.allCount || "0");
+                if (ramCount > 0) ram.value = ramCount;
+
+                const snob = document.getElementById(jednotky.snob);
+                const snobCount = parseInt(snob?.dataset.allCount || "0");
+                if (snobCount > 0) snob.value = 1;
+            }
+
+            setTimeout(() => {
+                const attackBtn = document.getElementById("target_attack");
+                if (attackBtn) attackBtn.click();
+                localStorage.removeItem(FLAG_RUNNING);
+            }, 200);
+            return;
+        }
+
+        if (typ === "barbarka") {
+            document.getElementById("unit_input_light").value = 25;
+            document.getElementById("unit_input_snob").value = 1;
+        } else {
+            const jednotky = {
+                axe: "unit_input_axe",
+                light: "unit_input_light",
+                ram: "unit_input_ram",
+                snob: "unit_input_snob"
+            };
+
+            const axe = document.getElementById(jednotky.axe);
+            const axeCount = parseInt(axe?.dataset.allCount || "0");
+            if (axeCount > 0) axe.value = axeCount;
+
+            const light = document.getElementById(jednotky.light);
+            const lightCount = parseInt(light?.dataset.allCount || "0");
+            const sendLight = Math.max(0, lightCount - 300);
+            if (sendLight > 0) light.value = sendLight;
+
+            const ram = document.getElementById(jednotky.ram);
+            const ramCount = parseInt(ram?.dataset.allCount || "0");
+            if (ramCount > 0) ram.value = ramCount;
+
+            const snob = document.getElementById(jednotky.snob);
+            const snobCount = parseInt(snob?.dataset.allCount || "0");
+            if (snobCount > 0) snob.value = 1;
+        }
+
+        setTimeout(() => {
+            const attackBtn = document.getElementById("target_attack");
+            if (!attackBtn) {
+                alert("Tlačítko Útok nebylo nalezeno.");
+                localStorage.removeItem(FLAG_RUNNING);
+                return;
+            }
+
+            attackBtn.click();
+
+            let clickCount = 0;
+            const maxClicks = pocet - 1;
+            const maxAttackIndex = pocet;
+
+            function clickNextAdd() {
+                const addBtn = document.querySelector("#troop_confirm_train.place-confirm-new-attack");
+                if (addBtn) {
+                    addBtn.click();
+                    clickCount++;
+                    if (clickCount < maxClicks) {
+                        setTimeout(clickNextAdd, 150);
+                    } else {
+                        setTimeout(() => {
+                            doplnitUtoky(2, maxAttackIndex, typ);
+                            setTimeout(() => {
+                                const submitBtn = document.getElementById("troop_confirm_submit");
+                                if (submitBtn) submitBtn.click();
+                                localStorage.removeItem(FLAG_RUNNING);
+                            }, 200);
+                        }, 150);
+                    }
+                } else {
+                    setTimeout(clickNextAdd, 250);
+                }
+            }
+
+            setTimeout(clickNextAdd, 500);
+        }, 200);
+    }
+
+    function doplnitUtoky(from, to, typ) {
+        for (let i = from; i <= to; i++) {
+            const jednotky = ["spear", "sword", "axe", "archer", "spy", "light", "heavy", "ram", "catapult", "knight", "snob"];
+            jednotky.forEach(j => {
+                const input = document.querySelector(`input[name="train[${i}][${j}]"]`);
+                if (input) input.value = "";
+            });
+
+            if (typ === "barbarka") {
+                const light = document.querySelector(`input[name="train[${i}][light]"]`);
+                const snob = document.querySelector(`input[name="train[${i}][snob]"]`);
+                if (light) light.value = 25;
+                if (snob) snob.value = 1;
+            } else {
+                const light = document.querySelector(`input[name="train[${i}][light]"]`);
+                const snob = document.querySelector(`input[name="train[${i}][snob]"]`);
+                if (light) light.value = 100;
+                if (snob) snob.value = 1;
+            }
+        }
+    }
+
+    function confirmPageScript() {
+        const typ = localStorage.getItem(TYPE_KEY) || "hrac";
+        const pocet = parseInt(localStorage.getItem(STORAGE_KEY) || "4");
+
+        if (pocet === 1) {
+            const submitBtn = document.getElementById("troop_confirm_submit");
+            if (submitBtn) submitBtn.click();
+            localStorage.removeItem(FLAG_RUNNING);
+            return;
+        }
+
+        let clickCount = 0;
+        const maxClicks = pocet - 1;
+        const maxAttackIndex = pocet;
+
+        function clickNextAdd() {
+            const addBtn = document.getElementById("troop_confirm_train");
+            if (addBtn) {
+                addBtn.click();
+                clickCount++;
+                if (clickCount < maxClicks) {
+                    setTimeout(clickNextAdd, 100);
+                } else {
+                    setTimeout(() => {
+                        doplnitUtoky(2, maxAttackIndex, typ);
+                        setTimeout(() => {
+                            const submitBtn = document.getElementById("troop_confirm_submit");
+                            if (submitBtn) submitBtn.click();
+                            localStorage.removeItem(FLAG_RUNNING);
+                        }, 200);
+                    }, 100);
+                }
+            } else {
+                localStorage.removeItem(FLAG_RUNNING);
+            }
+        }
+
+        setTimeout(clickNextAdd, 300);
+    }
+})();
