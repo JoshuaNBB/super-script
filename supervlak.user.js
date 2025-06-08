@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         SUPER VLAK 2
 // @namespace    https://github.com/JoshuaNBB
-// @version      4.4
-// @description  Vlak s režimem BARBARKA: 25 LC + 1 šlechtic ve všech útocích. © J.o.s.h.u.a 2025
+// @version      5.0
+// @description  Vlak s režimem BARBARKA: 25 LC + 1 šlechtic ve všech útocích. © J.o.s.h.u.a 2025 (ojeb)
 // @author       J.o.s.h.u.a
 // @match        https://*/game.php?*screen=place*Add commentMore actions
 // @match        https://*/game.php?village=*&screen=map*
@@ -11,6 +11,7 @@
 // @downloadURL  https://raw.githubusercontent.com/JoshuaNBB/super-script/main/supervlak.user.js
 // @grant        none
 // ==/UserScript==
+
 
 
 
@@ -172,7 +173,12 @@
 
     function spustitZaklad() {
         const typ = localStorage.getItem(TYPE_KEY) || "hrac";
-        const pocet = parseInt(localStorage.getItem(STORAGE_KEY) || "4");
+        let pocet = parseInt(localStorage.getItem(STORAGE_KEY) || "4");
+
+        // Pokud je režim 1, interně nastavíme 2 a pak 1 smažeme
+        const mazatDruhy = pocet === 1;
+        if (mazatDruhy) pocet = 2;
+        localStorage.setItem("vlakMazatDruhy", mazatDruhy ? "true" : "false");
 
         if (typ === "barbarka") {
             document.getElementById("unit_input_light").value = 25;
@@ -203,14 +209,6 @@
             if (snobCount > 0) snob.value = 1;
         }
 
-        if (pocet === 1) {
-            setTimeout(() => {
-                const attackBtn = document.getElementById("target_attack");
-                if (attackBtn) attackBtn.click();
-            }, 300);
-            return;
-        }
-
         setTimeout(() => {
             const attackBtn = document.getElementById("target_attack");
             if (!attackBtn) {
@@ -218,37 +216,8 @@
                 localStorage.removeItem(FLAG_RUNNING);
                 return;
             }
-
             attackBtn.click();
-
-            let clickCount = 0;
-            const maxClicks = pocet - 1;
-            const maxAttackIndex = pocet;
-
-            function clickNextAdd() {
-                const addBtn = document.querySelector("#troop_confirm_train.place-confirm-new-attack");
-                if (addBtn) {
-                    addBtn.click();
-                    clickCount++;
-                    if (clickCount < maxClicks) {
-                        setTimeout(clickNextAdd, 150);
-                    } else {
-                        setTimeout(() => {
-                            doplnitUtoky(2, maxAttackIndex, typ);
-                            setTimeout(() => {
-                                const submitBtn = document.getElementById("troop_confirm_submit");
-                                if (submitBtn) submitBtn.click();
-                                localStorage.removeItem(FLAG_RUNNING);
-                            }, 200);
-                        }, 150);
-                    }
-                } else {
-                    setTimeout(clickNextAdd, 250);
-                }
-            }
-
-            setTimeout(clickNextAdd, 500);
-        }, 200);
+        }, 300);
     }
 
     function doplnitUtoky(from, to, typ) {
@@ -275,22 +244,8 @@
 
     function confirmPageScript() {
         const typ = localStorage.getItem(TYPE_KEY) || "hrac";
-        const pocet = parseInt(localStorage.getItem(STORAGE_KEY) || "4");
-
-        if (pocet === 1) {
-            const observer = new MutationObserver(() => {
-                const btn = document.querySelector("#troop_confirm_submit");
-                if (btn && btn.offsetParent !== null) {
-                    observer.disconnect();
-                    btn.click();
-                    localStorage.removeItem(FLAG_RUNNING);
-                }
-            });
-
-            observer.observe(document.body, { childList: true, subtree: true });
-            setTimeout(() => observer.disconnect(), 5000); // záložní ukončení
-            return;
-        }
+        const mazatDruhy = localStorage.getItem("vlakMazatDruhy") === "true";
+        const pocet = 2;
 
         let clickCount = 0;
         const maxClicks = pocet - 1;
@@ -307,14 +262,22 @@
                     setTimeout(() => {
                         doplnitUtoky(2, maxAttackIndex, typ);
                         setTimeout(() => {
-                            const submitBtn = document.getElementById("troop_confirm_submit");
-                            if (submitBtn) submitBtn.click();
-                            localStorage.removeItem(FLAG_RUNNING);
+                            if (mazatDruhy) {
+                                const deleteBtn = [...document.querySelectorAll("img.float_right[src*='delete_14.png']")].pop();
+                                if (deleteBtn) deleteBtn.click();
+                            }
+                            setTimeout(() => {
+                                const submitBtn = document.getElementById("troop_confirm_submit");
+                                if (submitBtn) submitBtn.click();
+                                localStorage.removeItem(FLAG_RUNNING);
+                                localStorage.removeItem("vlakMazatDruhy");
+                            }, 200);
                         }, 200);
                     }, 100);
                 }
             } else {
                 localStorage.removeItem(FLAG_RUNNING);
+                localStorage.removeItem("vlakMazatDruhy");
             }
         }
 
