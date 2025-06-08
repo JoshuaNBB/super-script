@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         SUPER VLAK 2
 // @namespace    https://github.com/JoshuaNBB
-// @version      5.0
+// @version      5.1
 // @description  Vlak s režimem BARBARKA: 25 LC + 1 šlechtic ve všech útocích. © J.o.s.h.u.a 2025 (ojeb)
 // @author       J.o.s.h.u.a
 // @match        https://*/game.php?*screen=place*Add commentMore actions
@@ -11,9 +11,6 @@
 // @downloadURL  https://raw.githubusercontent.com/JoshuaNBB/super-script/main/supervlak.user.js
 // @grant        none
 // ==/UserScript==
-
-
-
 
 (function () {
     'use strict';
@@ -175,7 +172,6 @@
         const typ = localStorage.getItem(TYPE_KEY) || "hrac";
         let pocet = parseInt(localStorage.getItem(STORAGE_KEY) || "4");
 
-        // Pokud je režim 1, interně nastavíme 2 a pak 1 smažeme
         const mazatDruhy = pocet === 1;
         if (mazatDruhy) pocet = 2;
         localStorage.setItem("vlakMazatDruhy", mazatDruhy ? "true" : "false");
@@ -245,8 +241,18 @@
     function confirmPageScript() {
         const typ = localStorage.getItem(TYPE_KEY) || "hrac";
         const mazatDruhy = localStorage.getItem("vlakMazatDruhy") === "true";
-        const pocet = 2;
 
+        if (mazatDruhy) {
+            setTimeout(() => {
+                const submitBtn = document.getElementById("troop_confirm_submit");
+                if (submitBtn) submitBtn.click();
+                localStorage.removeItem(FLAG_RUNNING);
+                localStorage.removeItem("vlakMazatDruhy");
+            }, 300);
+            return;
+        }
+
+        const pocet = 2;
         let clickCount = 0;
         const maxClicks = pocet - 1;
         const maxAttackIndex = pocet;
@@ -262,10 +268,8 @@
                     setTimeout(() => {
                         doplnitUtoky(2, maxAttackIndex, typ);
                         setTimeout(() => {
-                            if (mazatDruhy) {
-                                const deleteBtn = [...document.querySelectorAll("img.float_right[src*='delete_14.png']")].pop();
-                                if (deleteBtn) deleteBtn.click();
-                            }
+                            const deleteBtn = [...document.querySelectorAll("img.float_right[src*='delete_14.png']")].pop();
+                            if (deleteBtn) deleteBtn.click();
                             setTimeout(() => {
                                 const submitBtn = document.getElementById("troop_confirm_submit");
                                 if (submitBtn) submitBtn.click();
