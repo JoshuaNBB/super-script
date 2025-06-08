@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         SUPER VLAK 2
 // @namespace    https://github.com/JoshuaNBB
-// @version      4.1
+// @version      4.2
 // @description  Vlak s režimem BARBARKA: 25 LC + 1 šlechtic ve všech útocích. © J.o.s.h.u.a 2025
 // @author       J.o.s.h.u.a
 // @match        https://*/game.php?*screen=place*Add commentMore actions
@@ -11,7 +11,6 @@
 // @downloadURL  https://raw.githubusercontent.com/JoshuaNBB/super-script/main/supervlak.user.js
 // @grant        none
 // ==/UserScript==
-
 
 (function () {
     'use strict';
@@ -202,17 +201,14 @@
             if (snobCount > 0) snob.value = 1;
         }
 
-        // Režim "1 šlechtic"
         if (pocet === 1) {
             setTimeout(() => {
                 const attackBtn = document.getElementById("target_attack");
                 if (attackBtn) attackBtn.click();
-                // potvrzení se provede v confirmPageScript
             }, 300);
             return;
         }
 
-        // Režimy 2+ šlechtici
         setTimeout(() => {
             const attackBtn = document.getElementById("target_attack");
             if (!attackBtn) {
@@ -280,9 +276,15 @@
         const pocet = parseInt(localStorage.getItem(STORAGE_KEY) || "4");
 
         if (pocet === 1) {
-            const submitBtn = document.getElementById("troop_confirm_submit");
-            if (submitBtn) submitBtn.click();
-            localStorage.removeItem(FLAG_RUNNING);
+            const interval = setInterval(() => {
+                const submitBtn = document.getElementById("troop_confirm_submit");
+                if (submitBtn && submitBtn.offsetParent !== null) {
+                    clearInterval(interval);
+                    submitBtn.click();
+                    localStorage.removeItem(FLAG_RUNNING);
+                }
+            }, 200);
+            setTimeout(() => clearInterval(interval), 5000);
             return;
         }
 
@@ -315,3 +317,4 @@
         setTimeout(clickNextAdd, 300);
     }
 })();
+
